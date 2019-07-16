@@ -1,0 +1,11 @@
+.example-container{
+    background:red;
+}
+.uiLogic{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+mat-sidenav {
+  width: 20%;
+}

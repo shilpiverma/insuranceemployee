@@ -26,7 +26,7 @@ export class EmployeeComponent implements OnInit {
     if(this.index>=0){
       FormData.index=this.index;
     }
-    console.log(FormData);
+    
     this.onChange.emit(FormData);
   }
 

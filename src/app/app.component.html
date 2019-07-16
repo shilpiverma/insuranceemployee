@@ -1,10 +1,38 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
 
-<button mat-raised-button (click)="showDialog()">Add Employee Information</button>
+<mat-sidenav-container >
+  <!-- <h3>{{title}}</h3> -->
+  
+  <mat-sidenav mode="side" opened>
+    <mat-card>  
+        <a (click)="showDialog()">Add Employee Information</a>
+    </mat-card>
+    <mat-card>  
+        <a (click)="showDialog()">Add Customer Information</a>
+    </mat-card>
+    <mat-card>  
+        <a (click)="showDialog()">Add Money Information</a>
+    </mat-card>
+    <mat-card>  
+        <a (click)="showDialog()">Add Plan Information</a>
+    </mat-card>
+  
+  </mat-sidenav>
+  <mat-sidenav-content style="min-height: 1000px;" layout="row" layout-align="center center"
+>
+    <div class="uiLogic">
+    <h1>{{title}}</h1>
+    </div>
+
+    <div layout="column">
+      <div><h3>{{title}}</h3></div>
+</div>
+</mat-sidenav-content>
+
+<!--   
+  <mat-sidenav mode="side" opened></mat-sidenav>
+  <mat-sidenav-content></mat-sidenav-content> -->
+</mat-sidenav-container>
+
 
 <router-outlet></router-outlet>
