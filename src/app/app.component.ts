@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component ,Inject} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { EmployeecontainerComponent } from './employeecontainer/employeecontainer.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'QuoteEmployee';
+
+  constructor(public dialog: MatDialog){}
+
+  showDialog(){
+    this.dialog.open(EmployeecontainerComponent, {
+        width: '1000px',
+      });
+    }
 }

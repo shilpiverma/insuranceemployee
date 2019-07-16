@@ -1,0 +1,32 @@
+
+
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+                <mat-form-field class="form-element">
+                    <input matInput placeholder="First Name" formControlName="first_name" (blur)="ReflectData()">
+                    <!-- <mat-error *ngIf="!formGroup.controls['first_name'].valid && formGroup.controls['first_name'].touched">
+                    {{ getErrorEmail() }}
+                    </mat-error> -->
+                </mat-form-field>
+            
+                <mat-form-field class="form-element">
+                    <input matInput placeholder="Last Name" formControlName="last_name" (blur)="ReflectData()">
+                    <!-- <mat-error *ngIf="!formGroup.controls['last_name'].valid && formGroup.controls['last_name'].touched">
+                    {{ getErrorEmail() }}
+                    </mat-error> -->
+                </mat-form-field>
+            
+            
+            
+                <mat-form-field class="form-element">
+                <input matInput placeholder="Email Address" formControlName="email" (blur)="ReflectData()">
+                <!-- <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
+                {{ getErrorEmail() }}
+                </mat-error> -->
+                </mat-form-field>
+            
+                
+                
+            </form>
+
+
+

@@ -1,0 +1,41 @@
+<mat-dialog-content>
+
+        <mat-toolbar color="primary">
+                <span class="fill-remaining-space">Employee Information</span>
+        </mat-toolbar>
+        <app-employee (onChange)="Employee($event)"></app-employee>
+        <div *ngIf="showSpouse">
+            Enter Spouse Information
+            <app-employee (onChange)="Spouse($event)"></app-employee>
+        </div>
+        
+        <div class="form-element" *ngIf="!showSpouse" >
+                <button mat-raised-button color="primary" type="submit" class="button" (click)="addSpouse()">Add Spouse</button>
+        </div>
+        
+        <div *ngIf="showDependent">
+            
+                <div *ngFor="let dependent of employee.dependents;let i=index">
+                        
+                        <mat-card>
+                                        Enter Dependent Information {{i+1}}
+                                        <button mat-raised-button (click)="removeDependent(i)">
+                                                close
+                                        </button>
+                                        <app-employee  [index]="i" (onChange)="Dependent($event)"></app-employee>
+                        </mat-card>
+                        
+                </div>
+                
+        </div>
+        
+        <div class="form-element" >
+                <button mat-raised-button color="primary" type="submit" class="button" (click)="addDependent()">Add Dependent</button>
+        </div>
+        
+        <div >
+                <button mat-raised-button color="primary" type="submit" class="button" (click)="saveEmployee()" >Save Employee </button>
+        </div>
+        
+
+</mat-dialog-content>
