@@ -14,7 +14,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
-      'email': [null, [Validators.required]],
+      'email': [null, [Validators.required]],//Custom validatoe
       'first_name': [null, Validators.required],
       'last_name': [null, [Validators.required]],
     });
